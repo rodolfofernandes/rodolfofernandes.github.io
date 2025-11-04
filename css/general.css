@@ -30,6 +30,7 @@ body {
   ul li:before {
     content: '✓';
     margin-left: -1.5rem;
+    color: #27ae60;
   }
 
   a {
@@ -43,3 +44,20 @@ body {
     width: 20px;
     height: 20px;
   }
+
+
+  @media print {
+    ul li:before {
+      content: '✓';
+      margin-left: -1.5rem;
+      color: #27ae60;
+      -webkit-print-color-adjust: exact; /* Safari e WebKit */
+      print-color-adjust: exact; /* Outros navegadores */
+    }
+
+    a {
+      color: #2980b9;
+      -webkit-print-color-adjust: exact; /* Safari e WebKit */
+      print-color-adjust: exact; /* Outros navegadores */
+    }
+}
